@@ -1,16 +1,16 @@
-// Claudio Souza Nunes
+// Igor Barduco
 
 #include <iostream>
 using namespace std;
 
-// headers
+
 void menu();
 void inicializar();
 void exibirQuantidadeElementos();
 void exibirElementos();
 void inserirElemento();
 void buscarElemento();
-//--------------------------
+
 
 
 const int MAX = 5;
@@ -27,7 +27,7 @@ void menu()
 {
 	int op = 0;
 	while (op != 6) {
-		system("cls"); // somente no windows
+		system("cls"); 
 		cout << "Menu Lista Linear";
 		cout << endl << endl;
 		cout << "1 - Inicializar Lista \n";
@@ -58,7 +58,7 @@ void menu()
 			break;
 		}
 
-		system("pause"); // somente no windows
+		system("pause");
 	}
 }
 
@@ -89,21 +89,23 @@ void exibirElementos()
 	}
 }
 
-void inserirElemento()
-{
-	if (nElementos < MAX) {
-		cout << "Digite o elemento: ";
-		cin >> lista[nElementos];
-		nElementos++;
-	}
-	else {
-		cout << "Lista cheia";
-	}
-
-}
-
-// deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	int numeroPosicoes = 0;
+	int valor;
+	cout << "Insira um valor:";
+	cin >> valor;
 
-}
+
+	if (nElementos == 0)
+	{
+		cout << " A lista esta vazia \n";
+	}
+	else {
+		for (int n = 0; n < nElementos; n++) {
+			if (valor == lista[n]) {
+				cout << "Valor encontrado na posicao" << n << endl;
+			}
+		}
+
+	}
